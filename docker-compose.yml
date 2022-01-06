@@ -1,0 +1,12 @@
+---
+version: "3"
+services:
+  python:
+    container_name: django_task
+    image: django_task
+    restart: always
+    ports:
+      - "8000:8000"
+    command: |
+      bash -c "python manage.py runserver --noreload 0.0.0.0:8000"
+...
